@@ -124,6 +124,12 @@
     font-size: $font-paragraph;
     span{
       font-weight: $font-weight-bold;
+      margin-right: 5pt;
+    }
+    img {
+      width: 100%;
+      max-width: 30pt;
+      margin-right: 5pt;
     }
   }
 

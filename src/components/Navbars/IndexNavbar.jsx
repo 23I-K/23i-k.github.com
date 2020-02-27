@@ -82,11 +82,6 @@ class ComponentsNavbar extends React.Component {
       collapseOut: ""
     });
   };
-  scrollToDownload = () => {
-    document
-      .getElementById("download-section")
-      .scrollIntoView({ behavior: "smooth" });
-  };
   render() {
     return (
       <Navbar
@@ -103,8 +98,10 @@ class ComponentsNavbar extends React.Component {
               title="Designed and Coded by Creative Tim"
               tag={Link}
             >
-              <span>BLK• </span>
-              Design System React
+              <div className={'d-flex flex-row w-100 align-items-center'}>
+                <img src={require("assets/img/svg/monochromeLogo.svg")} alt={'Shaver Lover Logo'}/>
+                <span>SHAVER</span>LOVER •
+              </div>
             </NavbarBrand>
             <button
               aria-expanded={this.state.collapseOpen}
@@ -188,36 +185,27 @@ class ComponentsNavbar extends React.Component {
                   onClick={e => e.preventDefault()}
                 >
                   <i className="fa fa-cogs d-lg-none d-xl-none" />
-                  Getting started
+                  Ещё о нас
                 </DropdownToggle>
                 <DropdownMenu className="dropdown-with-icons">
                   <DropdownItem href="https://demos.creative-tim.com/blk-design-system-react/#/documentation/tutorial">
                     <i className="tim-icons icon-paper" />
-                    Documentation
+                    Эвенты епта
                   </DropdownItem>
                   <DropdownItem tag={Link} to="/register-page">
                     <i className="tim-icons icon-bullet-list-67" />
-                    Register Page
+                    Зарегистрироваться и отдаться
                   </DropdownItem>
                   <DropdownItem tag={Link} to="/landing-page">
                     <i className="tim-icons icon-image-02" />
-                    Landing Page
+                    Всякое
                   </DropdownItem>
                   <DropdownItem tag={Link} to="/profile-page">
                     <i className="tim-icons icon-single-02" />
-                    Profile Page
+                    И такое
                   </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
-              <NavItem>
-                <Button
-                  className="nav-link d-none d-lg-block"
-                  color="default"
-                  onClick={this.scrollToDownload}
-                >
-                  <i className="tim-icons icon-cloud-download-93" /> Download
-                </Button>
-              </NavItem>
             </Nav>
           </Collapse>
         </Container>

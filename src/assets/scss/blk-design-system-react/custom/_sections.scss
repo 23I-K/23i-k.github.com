@@ -261,9 +261,13 @@
         max-width: 880px;
 
         &.brand {
-          width: 47%;
+          width: 55%;
         }
 
+    }
+
+    .content-center-top-fix {
+      top: 53%;
     }
 
     footer {

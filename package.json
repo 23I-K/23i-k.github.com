@@ -55,7 +55,10 @@
     "map-sass": "node-sass src/assets/scss/blk-design-system-react.scss src/assets/css/blk-design-system-react.css --source-map true"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": "react-app",
+    "rules": {
+      "indent": [2, 2, {"SwitchCase": 1}]
+    }
   },
   "browserslist": [
     ">0.2%",
