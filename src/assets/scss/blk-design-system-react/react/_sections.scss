@@ -5,7 +5,12 @@
   .page-header{
     .content-center {
       &.brand {
-        width: unset;
+        width: 100%;
+        height: auto;
+        & img {
+          width: 100%;
+          height: auto;
+        }
       }
     }
   }
